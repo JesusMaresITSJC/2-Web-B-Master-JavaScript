@@ -71,3 +71,48 @@ let id = Symbol('id');
 console.log("Tipo de dato Symbol:");
 console.log(id);
 console.log(typeof id);
+
+/*
+comentario de varias lineas o multilineas
+*/
+
+//practicas
+let ej1 = 42;
+console.log("ej1");
+console.log(typeof ej1);
+
+let ej2 = 'Veinticinco';
+console.log("ej2");
+console.log(typeof ej2);
+
+let ej3 = -666;
+console.log("ej3");
+console.log(typeof ej3);
+
+let ej4 = true;
+console.log("ej4");
+console.log(typeof ej4);
+
+let ej5 = 0;
+console.log("ej5");
+console.log(typeof ej5);
+
+let ej6 = '';
+console.log("ej6");
+console.log(typeof ej6);
+
+let ej7 = null;
+console.log("ej7");
+console.log(typeof ej7);
+
+let ej8 = undefined;
+console.log("ej8");
+console.log(typeof ej8);
+
+let ej9 = false;
+console.log("ej9");
+console.log(typeof ej9);
+
+
+
+
