@@ -11,11 +11,11 @@ if(edad >= 18){
 let calificacion = 5;
 
 if(calificacion >=9){
-    console.log("Eres increible")
+    console.log("Eres increible");
 }else if(calificacion >= 6){
-    console.log("Pasaste")
+    console.log("Pasaste");
 }else{
-    console.log("Reprobado")
+    console.log("Reprobado");
 }
 
 //operadores logicos
