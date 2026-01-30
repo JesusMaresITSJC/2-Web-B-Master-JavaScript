@@ -45,3 +45,15 @@ console.log(valor1 <= valor2);
 console.log(10 != '10');
 //diferente que estricto
 console.log(10 !== '10');
+
+console.log(valor1 + 2);
+
+valor1 = valor1 + 3;
+//acumuladores 
+valor1 += 4;
+valor2 = valor2 - 3;
+valor2 -= 8;
+console.log(valor1);
+
+// el modulo % devuelve el restante de una division
+
