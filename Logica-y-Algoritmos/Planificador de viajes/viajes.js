@@ -25,3 +25,5 @@ export const mostrarItinerario = () => {
         console.log("---------------------------");
     });
 };
+
+export const obtenerViajes = () => destinos;

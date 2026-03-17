@@ -1,12 +1,41 @@
-import { registrarDestino, mostrarItinerario } from './viajes.js';
+import { registrarDestino, obtenerViajes } from './viajes.js';
 
-const iniciarApp = () => {
+const form = document.getElementById("formViaje");
+const contenedor = document.getElementById("itinerario");
 
-    registrarDestino("Paris", "2024-06-15", "Avión", 2);
-    registrarDestino("Londres", "2024-07-01", "Tren", 4);
-    registrarDestino("New York", "2024-08-10", "Avión", 1);
+const mostrarItinerario = () => {
+    contenedor.innerHTML = "";
 
-    mostrarItinerario();
+    const viajes = obtenerViajes();
+
+    viajes.forEach((viaje, index) => {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <p><strong>Viaje #${index + 1}</strong></p>
+            <p>Destino: ${viaje.destino}</p>
+            <p>Fecha: ${viaje.fecha}</p>
+            <p>Transporte: ${viaje.transporte}</p>
+            <p>Personas: ${viaje.personas}</p>
+            <p>Costo: $${viaje.costo}</p>
+            <hr>
+        `;
+
+        contenedor.appendChild(div);
+    });
 };
 
-iniciarApp();
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const destino = document.getElementById("destino").value;
+    const fecha = document.getElementById("fecha").value;
+    const transporte = document.getElementById("transporte").value;
+    const personas = parseInt(document.getElementById("personas").value);
+
+    registrarDestino(destino, fecha, transporte, personas);
+
+    mostrarItinerario();
+
+    form.reset();
+});
