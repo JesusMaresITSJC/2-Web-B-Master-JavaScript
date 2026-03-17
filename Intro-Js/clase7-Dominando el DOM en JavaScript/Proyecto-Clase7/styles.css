@@ -1,0 +1,80 @@
+body {
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #2b2b2b;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 350px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.strength {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a8ff9e;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #8ef07a;
+}
+
+.copy-btn {
+    float: right;
+    cursor: pointer;
+    color: #a8ff9e;
+}

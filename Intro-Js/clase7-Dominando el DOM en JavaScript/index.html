@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Super</title>
+</head>
+<body>
+    <h1>Escribe tus Productos</h1>
+
+    <div>
+        <input type="text" id="iteminput" placeholder="papel de bano...">
+        <button id="addIteamBtn">Agregar Producto</button>
+    </div>
+
+    <main>
+        <ul id="iteamList"></ul>
+
+        <hr>
+
+        <h2>Matriz de Actividades:</h2>
+        <input type="text" id="Tareainput" placeholder="Tarea...">
+        <button id="addTareaBtn">Agregar Tarea</button>
+
+        <label for="select_tareas">Categoria:</label>
+        <select name="tareas" id="select_tareas">
+            <option value="1">Urgente</option>
+            <option value="2">Importante</option>
+            <option value="3">Para Despues</option>
+            <option value="4">Siguiente Semana</option>
+        </select>
+        <div>
+            <h3>Urgente</h3>
+            <ul id="LUrgente"></ul>
+        </div>
+        <div>
+            <h3>Importante</h3>
+            <ul id="LImportante"></ul>
+        </div>
+        <div>
+            <h3>Para Despues</h3>
+            <ul id="LPara_Despues"></ul>
+        </div>
+        <div>
+            <h3>Siguiente Semana</h3>
+            <ul id="LSiguiente_Semana"></ul>
+        </div>
+
+
+    </main>
+
+    
+    
+    <script src="dom2.js"></script>
+</body>
+</html>
