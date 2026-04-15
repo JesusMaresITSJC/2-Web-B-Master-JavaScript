@@ -3,12 +3,6 @@ const fs = require('fs');
 // Ruta del archivo de notas
 const filePath = './notas.json';
 
-/**
- * Agrega una nueva nota al archivo.
- * @param {string} titulo - El título de la nota.
- * @param {string} contenido - El contenido de la nota.
- */
-
 function agregarNota(titulo, contenido) {
   let notas = [];
 
@@ -27,9 +21,6 @@ function agregarNota(titulo, contenido) {
   console.log('Nota agregada con éxito.');
 }
 
-/**
- * Lista todas las notas guardadas.
- */
 function listarNotas() {
   if (fs.existsSync(filePath)) {
     const data = fs.readFileSync(filePath, 'utf8');
@@ -44,10 +35,7 @@ function listarNotas() {
   }
 }
 
-/**
- * Elimina una nota por su título.
- * @param {string} titulo - El título de la nota a eliminar.
- */
+
 function eliminarNota(titulo) {
   if (fs.existsSync(filePath)) {
     const data = fs.readFileSync(filePath, 'utf8');
