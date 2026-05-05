@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Validación con Zod</title>
+  <script src="https://cdn.jsdelivr.net/npm/zod@3.21.4/lib/index.umd.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <h1>Registro de Usuario</h1>
+
+  <form id="registerForm">
+    <label>Nombre:</label>
+    <input type="text" id="name" placeholder="Tu nombre" />
+    <small id="error-name" style="color:red;"></small><br>
+
+    <label>Correo:</label>
+    <input type="email" id="email" placeholder="Tu correo" />
+    <small id="error-email" style="color:red;"></small><br>
+
+    <label>Contraseña:</label>
+    <input type="password" id="password" placeholder="Contraseña" />
+    <small id="error-password" style="color:red;"></small><br>
+
+    <button type="submit">Registrar</button>
+  </form>
+
+</body>
+</html>
