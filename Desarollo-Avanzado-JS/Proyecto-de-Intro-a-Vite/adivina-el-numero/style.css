@@ -1,0 +1,314 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.contenedor {
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  text-align: center;
+
+  width: 350px;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+
+  padding: 10px;
+
+  width: 80%;
+
+  margin-top: 10px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+}
+
+.botones {
+
+  margin-top: 15px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+button {
+
+  padding: 10px 15px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+#adivinar {
+  background-color: #4CAF50;
+}
+
+#reiniciar {
+  background-color: #f44336;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#mensaje {
+
+  margin-top: 20px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+#intentos {
+
+  margin-top: 10px;
+
+  color: #555;
+}
+
+select {
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ccc;
+
+  width: 200px;
+
+  text-align: center;
+}
+
+#historial {
+
+  margin-top: 15px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.intento {
+
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 10px;
+
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 18px;
+}
+
+/* Número menor */
+.bajo {
+  background-color: #2196F3;
+}
+
+/* Número mayor */
+.alto {
+  background-color: #ff9800;
+}
+
+/* Correcto */
+.correcto {
+  background-color: #4CAF50;
+}
+
+/* Botón tema */
+
+.tema-btn {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  background-color: #333;
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+/* MODO OSCURO */
+
+body.dark {
+
+  background: #121212;
+
+  color: white;
+}
+
+body.dark .contenedor {
+
+  background: #1e1e1e;
+
+  color: white;
+
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+body.dark input,
+body.dark select {
+
+  background: #2c2c2c;
+
+  color: white;
+
+  border: 1px solid #555;
+}
+
+body.dark h1 {
+
+  color: white;
+}
+
+body.dark .tema-btn {
+
+  background-color: #f5f5f5;
+
+  color: black;
+}
+
+@media (max-width: 600px) {
+
+  body {
+
+    padding: 20px;
+
+    height: auto;
+
+    min-height: 100vh;
+  }
+
+  .contenedor {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    padding: 20px;
+  }
+
+  h1 {
+
+    font-size: 28px;
+  }
+
+  p {
+
+    font-size: 15px;
+  }
+
+  input,
+  select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+  }
+
+  .botones {
+
+    flex-direction: column;
+  }
+
+  button {
+
+    width: 100%;
+
+    font-size: 16px;
+  }
+
+  .tema-btn {
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+  #historial {
+
+    gap: 8px;
+  }
+
+  .intento {
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 16px;
+  }
+}

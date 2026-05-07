@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina el Número</title>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <button id="tema" class="tema-btn">🌙</button>
+      <h1>Adivina el número</h1>
+
+      <p id="descripcion">Selecciona una dificultad</p>
+
+      <!-- Dificultad -->
+      <select id="dificultad">
+        <option value="10">Fácil (1 - 10)</option>
+
+        <option value="50">Medio (1 - 50)</option>
+
+        <option value="100" selected>Difícil (1 - 100)</option>
+      </select>
+
+      <br /><br />
+
+      <input type="number" id="numero" placeholder="Escribe un número" />
+
+      <div class="botones">
+        <button id="adivinar">Adivinar</button>
+
+        <button id="reiniciar">Reiniciar</button>
+      </div>
+
+      <p id="mensaje"></p>
+
+      <p id="intentos"></p>
+
+      <h3>Intentos anteriores</h3>
+
+      <div id="historial"></div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
