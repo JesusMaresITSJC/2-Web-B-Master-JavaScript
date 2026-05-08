@@ -11,17 +11,14 @@ const descripcion = document.getElementById('descripcion');
 const historial = document.getElementById('historial');
 const botonTema = document.getElementById('tema');
 
-// Variables
 let limiteMaximo = parseInt(dificultad.value);
 let numeroSecreto = generarNumero();
 let intentos = 0;
 
-// Generar número aleatorio
 function generarNumero() {
   return Math.floor(Math.random() * limiteMaximo) + 1;
 }
 
-// Cambiar dificultad
 dificultad.addEventListener('change', () => {
 
   limiteMaximo = parseInt(dificultad.value);
@@ -32,12 +29,10 @@ dificultad.addEventListener('change', () => {
   reiniciarJuego();
 });
 
-// Evento adivinar
 botonAdivinar.addEventListener('click', () => {
 
   const numeroJugador = parseInt(inputNumero.value);
 
-  // Validación
   if (
     isNaN(numeroJugador) ||
     numeroJugador < 1 ||
@@ -57,7 +52,6 @@ botonAdivinar.addEventListener('click', () => {
   intentosTexto.textContent =
     `Intentos: ${intentos}`;
 
-  // Crear elemento visual del intento
   const intentoElemento = document.createElement('div');
 
   intentoElemento.classList.add('intento');
@@ -93,13 +87,11 @@ botonAdivinar.addEventListener('click', () => {
     intentoElemento.classList.add('alto');
   }
 
-  // Agregar al historial
   historial.appendChild(intentoElemento);
 
   inputNumero.value = '';
 });
 
-// Reiniciar
 botonReiniciar.addEventListener('click', reiniciarJuego);
 
 function reiniciarJuego() {
@@ -119,11 +111,9 @@ function reiniciarJuego() {
   inputNumero.focus();
 }
 
-// Texto inicial
 descripcion.textContent =
   `Adivina un número entre 1 y ${limiteMaximo}`;
 
-  // Tema oscuro
 let modoOscuro = false;
 
 botonTema.addEventListener('click', () => {
@@ -132,7 +122,6 @@ botonTema.addEventListener('click', () => {
 
   document.body.classList.toggle('dark');
 
-  // Cambiar icono
   if (modoOscuro) {
 
     botonTema.textContent = '☀️';
